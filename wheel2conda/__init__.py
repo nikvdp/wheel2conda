@@ -34,13 +34,14 @@ if __name__ == '__main__':
 
 PREFIX = '/opt/anaconda1anaconda2anaconda3'
 
-PYTHON_VERSIONS = ['3.5', '3.4', '2.7']
+# PYTHON_VERSIONS = ['3.5', '3.4', '2.7']
+PYTHON_VERSIONS = ['3.6']
 PLATFORM_PAIRS = [
-    (Platform.linux, '64'),
-    (Platform.linux, '32'),
+    # (Platform.linux, '64'),
+    # (Platform.linux, '32'),
     (Platform.osx, '64'),
-    (Platform.win, '64'),
-    (Platform.win, '32'),
+    # (Platform.win, '64'),
+    # (Platform.win, '32'),
 ]
 
 class CaseSensitiveContextParser(configparser.ConfigParser):
