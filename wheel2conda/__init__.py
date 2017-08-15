@@ -13,7 +13,7 @@ from pathlib import Path
 import posixpath
 import tarfile
 
-import win_cli_launchers
+# import win_cli_launchers
 
 from .requirements import requires_dist_to_conda_requirements
 from .wheel import WheelContents
@@ -202,7 +202,7 @@ class PackageBuilder:
     def _write_script_windows(self, tf, name, contents):
         self._write_script_unix(tf, name+'-script.py', contents)
         arch = 'x64' if self.bitness == '64' else 'x86'
-        src = win_cli_launchers.find_exe(arch)
+        # src = win_cli_launchers.find_exe(arch)
         dst = self.scripts_path() + name + '.exe'
         tf.add(src, arcname=dst)
         self.record_file(dst)
