@@ -60,8 +60,8 @@ class WheelContents:
         wheel_metadata = _read_metadata(dist_info / 'WHEEL')
         if wheel_metadata['Wheel-Version'][0] != '1.0':
             raise BadWheelError("wheel2conda only knows about wheel format 1.0")
-        if wheel_metadata['Root-Is-Purelib'][0].lower() != 'true':
-            raise BadWheelError("Can't currently autoconvert packages with platlib")
+        # if wheel_metadata['Root-Is-Purelib'][0].lower() != 'true':
+        #     raise BadWheelError("Can't currently autoconvert packages with platlib")
 
         for field in ('Name', 'Version'):
             if field not in self.metadata:
